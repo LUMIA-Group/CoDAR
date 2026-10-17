@@ -1,0 +1,42 @@
+# training arguments
+output_dir: outputs/dit
+per_device_train_batch_size: 64
+per_device_eval_batch_size: 128
+logging_dir: outputs/dit
+report_to: none
+run_name: dit_qwen3_owt_64_512
+eval_strategy: steps
+save_steps: 5000
+eval_steps: 50000
+logging_steps: 5
+save_total_limit: 3
+gradient_accumulation_steps: 1
+fp16: True
+dataloader_num_workers: 4
+learning_rate: 4.0e-4
+adam_beta1: 0.9
+adam_beta2: 0.95
+max_grad_norm: 1.0
+# num_train_epochs: 1
+max_steps: 250000
+lr_scheduler_type: constant_with_warmup
+warmup_steps: 10000
+weight_decay: 0.02
+cache_dir: ./.cache
+# embed_scheme: gpt2-last
+embed_scheme: qwen3-emb
+embed_model_path: /path/to/Qwen3-Embedding-0.6B
+remove_unused_columns: False
+
+# model config
+model_config: config/model_config/config_dit.json
+
+# data config
+# data_path: /path/to/lm1b
+# dataset: lm1b
+# data_path: data/ROCstory
+# dataset: roc
+data_path: /path/to/openwebtext_preprocess
+dataset: openwebtext
+
+resume: False

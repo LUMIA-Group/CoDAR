@@ -1,0 +1,41 @@
+# training arguments
+output_dir: outputs/decoder
+per_device_train_batch_size: 16
+per_device_eval_batch_size: 32
+logging_dir: outputs/decoder
+report_to: none
+run_name: dec_qwen_owt_64_fixbos_512_0.0
+save_steps: 2000
+eval_steps: 10000
+logging_steps: 5
+save_total_limit: 3
+gradient_accumulation_steps: 4
+fp16: True
+dataloader_num_workers: 4
+learning_rate: 1.0e-3
+adam_beta1: 0.9
+adam_beta2: 0.95
+max_grad_norm: 1.0
+num_train_epochs: 1
+# max_steps: 10000
+lr_scheduler_type: cosine
+# warmup_steps: 2500
+warmup_ratio: 0.05
+weight_decay: 1.0e-1
+cache_dir: ./.cache
+embed_scheme: qwen3-emb
+embed_model_path: /path/to/Qwen3-Embedding-0.6B
+# embed_scheme: gpt2-last
+remove_unused_columns: False
+
+# model config
+model_config: config/model_config/config_decoder_qwen_owt_512.json
+
+# data config
+# data_path: /path/to/lm1b
+# dataset: lm1b
+# data_path: data/ROCstory
+# dataset: roc
+data_path: /path/to/openwebtext_preprocess
+dataset: openwebtext
+resume: False

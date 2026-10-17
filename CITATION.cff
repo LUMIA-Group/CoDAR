@@ -1,0 +1,21 @@
+cff-version: 1.2.0
+title: "CoDAR: Continuous Diffusion Language Models are More Powerful Than You Think"
+authors:
+  - family-names: Shen
+    given-names: Junzhe
+  - family-names: Zhao
+    given-names: Jieru
+  - family-names: He
+    given-names: Ziwei
+  - family-names: Lin
+    given-names: Zhouhan
+date-released: 2026-09-26
+version: 0.1.0
+url: "https://arxiv.org/abs/2603.02547"
+keywords:
+  - EMNLP 2026
+  - continuous diffusion language models
+  - autoregressive decoding
+license: MIT
+repository-code: "https://github.com/LUMIA-Group/CoDAR"
+abstract: "Continuous diffusion language modeling with a contextual autoregressive decoder."

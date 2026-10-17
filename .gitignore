@@ -1,0 +1,26 @@
+install
+proxy.sh
+test.py
+/data/*
+!/data/*.py
+__pycache__/
+.vscode/
+.DS_Store
+swanlog/
+outputs/
+plots*/
+figures*/
+slurm/
+samples/
+# Local artifacts (configuration JSON and documentation figures remain trackable)
+*.pkl
+*.pt
+*.ckpt
+*.bin
+*.safetensors
+*.out
+*.err
+*.log
+.cache/
+.venv/
+*.egg-info/

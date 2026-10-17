@@ -1,0 +1,14 @@
+{
+    "architectures": [
+      "DIT"
+    ],
+    "max_seq_len": 128,
+    "hidden_size": 768,
+    "timestep_cond_dim": 64,
+    "num_hidden_layers": 12,
+    "num_attention_heads": 12,
+    "attention_dropout": 0.0,
+    "p_uniform": 0.0,
+    "t_eps": 1e-4,
+    "latent_dim": 64
+  }
